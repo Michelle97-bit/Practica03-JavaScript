@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+<meta charset="UTF-8"> 
+<script type="text/javascript" src="../validaciones/validaciones.js"></script>
+
+<title>VALIDACION DE CAMPOS</title>
+</head> 
+<body> 
+
+
+<form id="formulario01" method="POST" action="mensaje.php" onsubmit="return validarCamposObligatorios() "  > 
+
+    <legend><Strong>Creacion de Usuario</Strong> </legend> <br> 
+
+    <label for="cedula">Cedula (*)</label>
+     <input type="text" id="cedula" name="cedula" value="" onblur="validarcedu(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57'    maxlength="10" placeholder="Ingrese su cédula"  /> <br> 
+     <br>
+	 <span id="mensajeCedula" class ="error" >  </span>
+	 <br><br>
+	 
+     <label for="nombres">Nombres (*)</label> 
+     <input type="text" id="nombres" name="nombres" value="" onkeypress="return soloLetras(event);" placeholder="Ingrese sus nombres"   /> <br> 
+	 <span id="mensajeNombre" class ="error" >  </span>
+	
+	 <br><br>
+	 
+     <label for="apellidos">Apellidos (*)</label> 
+     <input type="text" id="apellidos" name="apellidos" value="" onkeypress="return soloLetras(event);"  placeholder="Ingrese su apellidos"  /> <br> 
+	 <span id="mensajeApellido" class ="error" >  </span>
+	 <br><br>
+	 
+     <label for="direccion">Dirección (*)</label> 
+     <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección"    /><br> 
+	 <span id="mensajeDireccion" class ="error" >  </span>
+	 <br><br>
+	 
+     <label for="telefono">Teléfono (*)</label> 
+     <input type="text" id="telefono" name="telefono" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Ingrese su teléfono"   /><br>  
+	 <span id="mensajeTelefono" class ="error" >  </span>
+	 <br><br>
+	 
+     <br> <label for="fecha">Fecha Nacimiento (*)</label> 
+     <input type="text" id="fechaNacimiento" name="fechaNacimiento" onblur =" validarFecha(this)" placeholder="Ingrese su fecha de nacimiento"   /> <br> 
+     <span id="mensajeFecha" class ="error" >  </span>
+	 
+	 <br><br>
+	 
+	 <label for="correo">Correo electrónico (*)</label> 
+     <input type="text" id="correo" name="correo" value="" oninput="validarCorreo(this)"   placeholder="Ingrese su correo electrónico ..."  /> <br> 
+	 <br>
+	 <span id="mensajeCorreo" class ="error" >  </span>
+	 <br><br>
+	  
+	 <label for="contra">Contrasena(*)</label> 
+     <input type="password" id="contra" name="contra" value="" oninput="validarContra()"   placeholder="Ingrese su Contrasena ..."  /> <br> 
+	 <br>
+	 <span id="mensajeContra" class ="error" > </span>
+	 <br><br>
+
+	  <input type="submit" id="crear" name="crear" value="Aceptar" />
+
+
+	   <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+
+	</form> 
+    
+    </body> 
+
+</html>

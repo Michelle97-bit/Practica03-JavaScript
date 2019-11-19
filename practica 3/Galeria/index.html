@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Galería </title> 
+        <meta name="keywords" content="HTML5, CSS, JavaScript, content, margin"/>
+        <link href="css/estilos.css" rel="stylesheet">
+    </head>
+
+    <body onload="validarPos()">
+
+        <h1>Galeria</h1>
+        <form onsubmit="return siguienteImg()">
+            <!--<div class="container">  -->
+                <div class="center">               
+               
+                    <img id="imagen" alt="imagen">
+
+                </div>
+
+                <br />
+
+                <div class="center"> 
+
+                    <input type="button" id="anterior" value="Anterior" onclick="anteriorImg()">
+                    <input type="button" id="iniciar" value="Iniciar" onclick="reiniciar()">
+                    <input type="button" id="siguiente" value="Siguiente" onclick="siguienteImg()">
+
+                </div>
+            <!--</div> -->
+        </form>
+    
+        <script type="text/javascript" src="js/script1.js"> </script>
+
+    </body>
+</html>
